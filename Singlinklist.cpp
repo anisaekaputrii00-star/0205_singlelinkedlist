@@ -36,11 +36,14 @@ class LinkedList
                 cout << "\nDuplikasi noMhs tidak diijinkan\n";
                 return;
             }
+        
+            nodeBaru->next = START;
+            START = nodeBaru;   
+            return;
         }
         
-        {
             
-        }
+        
         cout << endl;
     }
 };
