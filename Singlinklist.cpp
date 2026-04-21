@@ -20,7 +20,7 @@ class LinkedList
     void addNode()
     {
         int nim;
-        cout << "/nMasukkan Nomor Mahasiswa : ";
+        cout << "\nMasukkan Nomor Mahasiswa : ";
         cin >> nim;
 
         Node *nodeBaru = new Node();
@@ -41,9 +41,24 @@ class LinkedList
             START = nodeBaru;   
             return;
         }
+
+        Node *previous = START;
+        Node *current = START;
+
+        while (current != NULL && current-> nim > current->noMhs)
+        {
+            if (current->nim == current->noMhs)
+            {
+                cout << "\nDuplikasi noMhs tidak diijinkan\n";
+                return;
+            }
+            NodeBaru->next = current;
+            previous->next = nodeBaru;
+          
+        }
         
             
         
-        cout << endl;
+        
     }
 };
